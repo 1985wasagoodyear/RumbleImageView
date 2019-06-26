@@ -81,7 +81,7 @@
     NSMutableArray *pos = [[NSMutableArray alloc] initWithCapacity:_animationPositionsCount];
     int width = (self.frame.size.width - _animationVariationMax) / 2;
     for (int i = 0; i < _animationPositionsCount; i++) {
-        int uInt = arc4random_uniform(_animationVariationMax);
+        int uInt = arc4random_uniform((int)_animationVariationMax);
         NSNumber *num = [NSNumber numberWithInt:uInt + width];
         [pos addObject:num];
     }
@@ -92,7 +92,7 @@
     NSMutableArray *pos = [[NSMutableArray alloc] initWithCapacity:_animationPositionsCount];
     int height = (self.frame.size.height - _animationVariationMax) / 2;
     for (int i = 0; i < _animationPositionsCount; i++) {
-        int uInt = arc4random_uniform(_animationVariationMax);
+        int uInt = arc4random_uniform((int)_animationVariationMax);
         NSNumber *num = [NSNumber numberWithInt:uInt + height];
         [pos addObject:num];
     }
